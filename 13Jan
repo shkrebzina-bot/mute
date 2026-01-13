@@ -1,0 +1,64 @@
+Ush 1
+odd_count = 0
+even_count = 0
+while True:
+    num = int(input("Enter a number(0 to stop): "))
+    if num == 0:
+        break
+    if num % 2 ==0:
+        even_count += 1
+    else:
+        odd_count +=1
+print("Odd number entered:", odd_count)
+print("Even numbers entered:", even_count)
+
+
+
+Ush 2
+blocks = int(input("Enter number of blocks: "))
+layers = 0
+used_blocks = 0
+next_layer = 1
+while used_blocks + next_layer <= blocks:
+    used_blocks += next_layer
+    layers += 1
+    next_layer += 1
+print("Number of layers:", layers)
+
+
+
+Ush3
+students = []
+grades = []
+while True:
+    name = input("Enter student name (or 'stop' to finish):")
+    if name.lower() == "stop":
+        break
+    grade = float(input("Enter grade: "))
+    students.append(name)
+    grades.append(grade)
+print("\nAll student names:")
+print(students)
+print("\nAll grades:")
+print(grades)
+print("\nStudents with their grades:")
+for i in range(len(students)):
+    print(students[i], "-", grades[i])
+ascending = sorted(grades)
+descending = sorted(grades, reverse=True)
+print("\nGrades ascending:")
+print(ascending)
+print("\nGrades descending:")
+print(descending)
+
+
+
+
+Ush 4
+word = input("Enter a word: ").upper()
+vowels = "AEIOU"
+result = ""
+for char in word:
+    if char.isalpha() and char not in vowels:
+        result += char
+print(result)
